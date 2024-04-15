@@ -1,0 +1,103 @@
+:root {
+    --primary-pale-blue: hsl(225, 100%, 94%);
+    --primary-blue: hsl(245, 75%, 52%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --pale-blue: hsl(225, 100%, 98%);
+    --dark-blue: hsl(223, 47%, 23%);
+
+    --font: "Red Hat Display", sans-serif;
+}
+
+body {
+    background: url(../images/pattern-background-desktop.svg) no-repeat var(--primary-pale-blue);
+    min-height: 100vh;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    font-family: var(--font);
+    font-weight: 500;
+    color: var(--desaturated-blue);
+}
+
+button {
+    background: transparent;
+    border: none;
+}
+
+.summary-container {
+    max-width: 450px;
+    border-radius: 25px;
+    overflow: hidden;
+    background: white;
+}
+
+.summary-bottom {
+    display: grid;
+    place-items: center;
+    padding: 40px 35px;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.summary-bottom h2 {
+    margin: 0 0 5px;
+    color: var(--dark-blue);
+    font-weight: 900;;
+    text-shadow: 1px 2px hsl(223deg 47% 23% / 10%);
+}
+
+.summary-bottom p {
+    text-align: center;
+    font-size: 16px;
+    color: var(--desaturated-blue);
+}
+
+.plan {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    padding: 25px;
+    background: var(--pale-blue);
+    border-radius: 10px;
+    margin: 5px 0 30px;
+}
+
+.plan img,
+.plan .plan-option {
+    grid-row: 1/3;
+}
+
+.plan .details {
+    grid-column: 2/3;
+}
+
+.plan .label {
+    color: var(--dark-blue);
+    font-weight: 900;;
+}
+
+.plan .plan-option {
+    grid-column: 3/4;
+    color: var(--primary-blue);
+    text-decoration: underline;
+    font-weight: 700;;
+}
+
+.choice {
+    display: grid;
+    gap: 25px;
+    font-size: 16px;
+}
+
+.choice .proceed {
+    background: var(--primary-blue);
+    color: white;
+    font-weight: 700;;
+    padding: 15px 83px;
+    border-radius: 10px;
+    box-shadow: 1px 6px 40px var(--desaturated-blue);
+}
+
+.choice .cancel {
+    color: var(--desaturated-blue);
+    font-weight: 700;;
+}
